@@ -13,6 +13,7 @@
 			height: 2500px;
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 		}
 		.banner{
 			flex-grow: 6;
@@ -32,13 +33,12 @@
 		}
 		#img-logo{
 			flex-grow: 1;
-			background: yellow;
-			padding: 15px;
+			padding: 50px;
 		}
 		#menu{
-			flex-grow: 10;
-			background: gray;
-			align-items: flex-end;
+			flex-grow: 1;
+			justify-content: flex-end;
+			display: flex;
 		}
 		.comoFunciona{
 			flex-grow: 5.3;
@@ -56,26 +56,52 @@
 			flex-grow: 2;
 			background:  rgb(42,42,42);
 		}
-
+		nav{
+			padding: 50px;
+		}
+		a{
+			padding: 5px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		/*Links não visitados*/
+		a:link{
+			color: black;
+		}
+		/*Links visitados*/
+		a:visited{
+			color: black;
+		}
+		/*Links Hover*/
+		a:hover{
+			background: rgb(252,232,109);
+			color: #b5b5b5;
+		}
+		/*Links Ativos*/
+		a:active{
+			color: #535353;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="wrap">
 		<div class="banner">
-			<header>
+			<div style="display: flex">
 				<div id="img-logo">
 					<img src="img/logo.png" width="40px" height="40px">
 				</div>
 				<div id="menu">
-					<a href="index.html">Home</a>
-					<a href="games.html">Games</a>
-					<a href="apps.html">Apps</a>
-					<a href="eletronicos.html">Eletrônicos</a>
+					<nav>
+						<a href="index.html">Create an account</a>
+						<a href="games.html">How it works</a>
+						<a href="apps.html">Support</a>
+						<a href="eletronicos.html">FAQ</a>
+					</nav>
 				</div>
-			</header>
+			</div>
 			<div id="content-banner">
-				
+				asda
 			</div>
 		</div>
 		<div class="comoFunciona">
