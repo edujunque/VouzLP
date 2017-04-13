@@ -29,16 +29,22 @@
 		}
 		#content-banner{
 			background: pink;
-			flex-grow: 20;
+			flex-grow: 4;
+			display: flex;
+			flex-wrap: wrap;
 		}
 		#img-logo{
 			flex-grow: 1;
-			padding: 50px;
+			padding: 0;
+			align-self: center;
+			/*background-color: yellow;*/
+			/*margin-left: 50px*/
 		}
 		#menu{
-			flex-grow: 1;
+			flex-grow: 8;
 			justify-content: flex-end;
 			display: flex;
+			/*background-color: gray;*/
 		}
 		.comoFunciona{
 			flex-grow: 5.3;
@@ -57,7 +63,7 @@
 			background:  rgb(42,42,42);
 		}
 		nav{
-			padding: 50px;
+			/*padding: 50px;*/
 		}
 		a{
 			padding: 5px;
@@ -82,35 +88,79 @@
 			color: #535353;
 		}
 	</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+	$(document).ready(function() {
+		function filterPath(string) {
+			return string
+				.replace(/^\//,'')
+				.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+				.replace(/\/$/,'');
+				}
+					$('a[href*=#]').each(function() {
+					if ( filterPath(location.pathname) == filterPath(this.pathname)
+					&& location.hostname == this.hostname
+					&& this.hash.replace(/#/,'') ) {
+					var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+					var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+					if ($target) {
+					var targetOffset = $target.offset().top;
+					$(this).click(function() {
+						//define o tempo da animação de transição.
+					$('html, body').animate({scrollTop: targetOffset}, 1500);
+						return false;
+					});
+				}
+			}
+		});
+	});
+	// ]]>
+</script>
 </head>
 
 <body>
 	<div class="wrap">
-		<div class="banner">
-			<div style="display: flex">
+		<section class="banner">
+			<div style="display: flex; flex-wrap: wrap; flex-basis: 0%; flex-grow: 1">
 				<div id="img-logo">
-					<img src="img/logo.png" width="40px" height="40px">
+					<div style="display: flex; flex-basis: 0%; flex-grow: 0; justify-content: center;">
+						<img src="img/logo.png" width="40px" height="40px">
+					</div>
 				</div>
 				<div id="menu">
-					<nav>
-						<a href="index.html">Create an account</a>
-						<a href="games.html">How it works</a>
-						<a href="apps.html">Support</a>
-						<a href="eletronicos.html">FAQ</a>
-					</nav>
+					<div style="display: flex; flex-basis: 0%; flex-grow: 1; justify-content: flex-end; align-items: center; margin-right: 150px">
+						<nav>
+							<a href="#comoFunciona" >How it works</a>
+							<a href="#download">Download</a>
+							<a href="#junteanos">Junte-se a nós</a>
+						</nav>
+					</div>
 				</div>
 			</div>
 			<div id="content-banner">
-				asda
+				<div style="flex-grow: 0; background-color: blue">
+					<div>
+						<span style="font-size: 35px; font-weight: bold">VOUZ -</span></br>
+						<span style="font-size: 40px; font-weight: bold">texto texto texto texto texto</span></br></br></br>
+						<span style="font-size: 30px;">texto texto texto texto texto</span></br>
+						<span style="font-size: 30px;">texto texto texto texto texto</span></br>
+						<span style="font-size: 30px;">texto texto texto</span>
+					</div>
+				</div>
+				<div style=" flex-grow: 0; background-color: yellow; display: flex">
+					<div style="background-color: red; flex-grow: 0">
+						<img src="img/holdingCell.jpg" style="max-width: 100%; height: auto;">
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="comoFunciona">
+		</section>
+		<section id="comoFunciona" class="comoFunciona">
+			yo
+		</section>
+		<div id="download" class="download">
 			yo
 		</div>
-		<div class="download">
-			yo
-		</div>
-		<div class="junteanos">
+		<div id="junteanos" class="junteanos">
 			yo
 		</div>
 		<footer class="footer">
