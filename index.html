@@ -19,6 +19,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/stellar.min.js"></script>
 <script type="text/javascript">
+	$(document).ready(function() {
+		$(window).stellar();
+		var windowsHei = $(window).height();
+		$("#bloco1").css('height',windowsHei);		
+		$("#bloco3").css('height',windowsHei);		
+	});
+</script>
+<script type="text/javascript">
 	function abreFechaMenu(){
 		var hamburger = document.getElementById("hamburger");
 		if (hasClass(hamburger, "is-active")){
@@ -71,11 +79,6 @@
 	});
 	// ]]>
 </script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(window).stellar();
-	});
-</script>
 </head>
 
 <body>
@@ -117,25 +120,25 @@
 							  <!-- This "nav-menu" is hidden on mobile -->
 							  <!-- Add the modifier "is-active" to display it on mobile -->
 							  <div id="menu" class="nav-right nav-menu">
-							    <a class="nav-item" href="#comoFunciona" style="color: #EE2B7A">
-							      Como funciona
+							    <a class="nav-item" href="#comoFunciona" style="color: #EE2B7A; font-size: 1.05rem;">
+							      COMO FUNCIONA
 							    </a>
-							    <a class="nav-item" href="#Download" style="color: #EE2B7A">
-							      Download
+							    <a class="nav-item" href="#Download" style="color: #EE2B7A; font-size: 1.05rem;">
+							      DOWNLOAD
 							    </a>
-							    <a class="nav-item" href="#maisInfo" style="color: #EE2B7A">
-							      Mais informações
+							    <a class="nav-item" href="#maisInfo" style="color: #EE2B7A; font-size: 1.05rem;">
+							      ENTRE EM CONTATO
 							    </a>
 
 							  </div>
 							</nav>							
 						</div>
 					</div>
-					<div class="columns is-gapless" style="height: 675px; margin-bottom: 0px;">
+					<div id="bloco1" class="columns is-gapless" style="margin-bottom: 0px;">
 						<div class="column is-half">
 							<section class="hero is-large is-bold" style="background: transparent;">
-							  <div class="hero-body" style="padding-bottom: 0; padding-top: 9rem">
-							    <div class="container column is-11" style="margin-left: 50px;">
+							  <div class="hero-body" style="padding-bottom: 0; padding-top: 5rem; ">
+							    <div class="container column is-11" style="margin-left: 50px;margin-bottom: 25px">
 							      <h1 class="title" style="font-weight: 20; font-size: 120px; color: #fff">
 							        VOUZ
 							      </h1>
@@ -146,6 +149,24 @@
 									Festas, baladas, bares e muito mais reunidos em um APP. Com o Vouz você nunca ficará sem ter o que fazer!
 							      </h2>
 							    </div>
+								<div class="columns">
+									<div class="column" style="text-align: right;">
+										<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
+											<span>
+												<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
+											</span>
+											Google Play
+										</a>
+									</div>
+									<div class="column" style="text-align: left;">
+										<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
+											<span>
+												<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
+											</span>
+											Apple Store
+										</a>
+									</div>									
+								</div>							    
 							  </div>
 							</section>
 						</div>
@@ -154,7 +175,7 @@
 							<div style="background-image: url(img/holdingCell.png);background-size: 85% 155%;width: 100%;height: 100%;background-repeat: no-repeat;margin-left: 17%;position: absolute;margin-top: 0%;padding-top: 100px;"></div>
 						</div>		
 					</div>
-					<div class="columns is-gapless" style="position: absolute;justify-content: center;width: 100%;bottom: 0.2%;">
+					<div class="columns is-gapless" style="position: absolute;justify-content: center;width: 100%;bottom: -75px;">
 					    <a href="#comoFunciona" style="background-color: grey;opacity: 0.6;justify-content: center;max-width: 50px;border-radius: 30px;">
 					      <img src="img\scroll-down-arrow-icon.png">
 					    </a>						
@@ -162,8 +183,9 @@
 				</div>
 
 			</div>
-			<a id="comoFunciona"></a>
+			
 			<section class="columns is-gapless" style="background: #303030; margin: 0; padding-bottom: 50px" >
+			<a id="comoFunciona" style="padding-top: 100px"></a>
 				<div class="column">
 					<div class="columns" style="margin-top: 50px; margin-bottom: 50px">
 						<div class="column" style="text-align: center; font-size: 35px; color: #EE2B7A">
@@ -174,11 +196,11 @@
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
 							<div class="columns">
 								<div class="column">
-									<img src="img\icones-01.png" class="image is-128x128">
+									<img src="img\icones-01.png" style="width: 280px; height: 280px">
 								</div>
 							</div>
 							<div class="columns">
-								<div class="column" style="color: #EE2B7A">
+								<div class="column" style="color: #EE2B7A; font-size: 22px">
 									CADASTRE-SE
 								</div>
 							</div>
@@ -186,11 +208,11 @@
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
 							<div class="columns">
 								<div class="column">
-									<img src="img\icones-02.png" class="image is-128x128">
+									<img src="img\icones-02.png" style="width: 280px; height: 280px">
 								</div>
 							</div>
 							<div class="columns">
-								<div class="column" style="color: #EE2B7A">
+								<div class="column" style="color: #EE2B7A; font-size: 22px">
 									FIQUE POR DENTRO
 								</div>
 							</div>
@@ -198,46 +220,54 @@
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
 							<div class="columns">
 								<div class="column">
-									<img src="img\icones-03.png" class="image is-128x128">
+									<img src="img\icones-03.png" style="width: 280px; height: 280px">
 								</div>
 							</div>
 							<div class="columns">
-								<div class="column" style="color: #EE2B7A">
+								<div class="column" style="color: #EE2B7A; font-size: 22px">
 									PARTY HARD
 								</div>
 							</div>
 						</div>						
 					</div>
-					<div class="columns">
-						<div class="column" style="text-align: center;">
-							<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
-								<span>
-									<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
-								</span>
-								Google Play
-							</a>
-						</div>
-					</div>
 				</div>
 			</section>
-			<section class="columns is-gapless" style="margin: 0; background: #1d1d1d" >
+			<section id="bloco3" class="columns is-gapless" style="margin: 0; background: #1d1d1d" >
 				<a id="Download"></a>
 				<div class="column is-half">
 					<section class="hero is-large is-bold" style="background: #1d1d1d">
 					  <div class="hero-body">
-					    <div class="container column is-11" style="margin-left: 50px;">
-					      <h1 class="title" style="color: #EE2B7A">
-					        Download, encontre a balada e PARTY HARD!
+					    <div class="container column is-11" style="margin-left: 50px; margin-bottom: 25px">
+					      <h1 class="title" style="color: #EE2B7A;font-size: 42px;">
+					        Um novo jeito de curtir seus dias! Nunca mais fique sem ter o que fazer.
 					      </h1>
-					      <h2 class="subtitle" style="color: #EE2B7A">
-					        Encontre a balada que está bombando mais hoje ou descubra uma festa pelo tipo de música ou ainda reserve seu ingresso para a festa do final de semana.
+					      <h2 class="subtitle" style="color: #EE2B7A;font-size: 24px;padding-top: 15px;">
+							No Vouz APP você terá uma timeline repleta de festas e baladas, você poderá ver todas as informações que precisa, comprar seu ingresso ou colocar seu nome na lista VIP, ver quais festas seus amigos irão e ainda salvar aquela foto bacana que tiraram de você na festa. Realize seu Check-in e ganhe pontos para trocar por ingressos.
 					      </h2>
 					    </div>
+						<div class="columns">
+							<div class="column" style="text-align: right;">
+								<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
+									<span>
+										<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
+									</span>
+									Google Play
+								</a>
+							</div>
+							<div class="column" style="text-align: left;">
+								<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
+									<span>
+										<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
+									</span>
+									Apple Store
+								</a>
+							</div>									
+						</div>					    
 					  </div>
 					</section>
 				</div>
-				<div class="column" style="background: #1d1d1d; display: flex; align-items: flex-end; padding-top: 15px; padding-bottom: 15px">
-					<img src="img\screens.png" style="max-width: 80%; height: auto">
+				<div class="column" style="background: #1d1d1d;display: flex;align-items: flex-end;padding-bottom: 70px;margin-left: 115px;">
+					<img src="img\screens.png" style="max-width: 35%;height: auto;position: absolute;">
 				</div>
 			</section>
 			
@@ -247,18 +277,25 @@
 					<section class="hero is-medium is-bold" style="background-color: #303030">
 					  <div class="hero-body">
 					    <div class="container has-text-centered" >
-					      <h1 class="title" style="color: #EE2B7A">
-					        Um novo jeito de curtir seus dias! Nunca mais fique sem ter o que fazer.
+					      <h1 class="title" style="color: #fff">
+					        ENTRE EM CONTATO
 					      </h1>
-					      <h2 class="subtitle" style="color: #EE2B7A">
-							No Vouz APP você terá uma timeline repleta de festas e baladas, você poderá ver todas as informações que precisa, comprar seu ingresso ou colocar seu nome na lista VIP, ver quais festas seus amigos irão e ainda salvar aquela foto bacana que tiraram de você na festa. Realize seu Check-in e ganhe pontos para trocar por ingressos.
-					      </h2>
+							<div class="field">
+							  <p class="control">
+							    <input class="input" type="text" placeholder="Digite seu e-mail">
+							  </p>
+							</div>
+							<div class="field is-grouped" style="justify-content: center;">
+							  <p class="control">
+							    <button class="button is-primary">ENVIAR</button>
+							  </p>
+							</div>													
 					    </div>
 					  </div>
 					</section>
 				</div>
 			</section>
-			<footer class="footer" style="background: #1d1d1d">
+			<footer class="footer" style="background: #1d1d1d;padding-top: 96px;">
 			  <div class="container">
 			    <div class="content has-text-centered">
 			      <p>
@@ -269,13 +306,13 @@
 			      <p>
 		      		  <div class="nav-center">
 					    <a class="nav-item" href="#comoFunciona" style="color: #EE2B7A">
-					      Como funciona
+					      COMO FUNCIONA
 					    </a>
 					    <a class="nav-item" href="#Download" style="color: #EE2B7A">
-					      Download
+					      DOWNLOAD
 					    </a>
 					    <a class="nav-item" href="#maisInfo" style="color: #EE2B7A">
-					      Mais informações
+					      ENTRE EM CONTATO
 					    </a>
 					  </div>
 			      </p>
