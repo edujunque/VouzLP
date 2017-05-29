@@ -16,76 +16,18 @@
 		
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/stellar.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(window).stellar();
-		var windowsHei = $(window).height();
-		$("#bloco1").css('height',windowsHei);		
-		$("#bloco3").css('height',windowsHei);		
-	});
-</script>
-<script type="text/javascript">
-	function abreFechaMenu(){
-		var hamburger = document.getElementById("hamburger");
-		if (hasClass(hamburger, "is-active")){
-			//verifica se esta com o menu aberto, caso sim, retira a classe "is-active"
-			hamburger.className -= " is-active";
-			hamburger.className += " nav-toggle";
-		} else{
-			hamburger.className += " is-active";
-		}
-		var menu = document.getElementById("menu");
-		if (hasClass(menu, "is-active")){
-			//verifica se esta com o menu aberto, caso sim, retira a classe "is-active"
-			menu.className -= " is-active";
-			menu.className += " nav-right nav-menu";
-		} else{
-			menu.className += " is-active";
-		}
-		
-		
-	}
+<script type="text/javascript" src="js/jsIndex.js"></script>
 
-	function hasClass(element, cls) {
-    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-	}
-</script>
-<script type="text/javascript">// <![CDATA[
-	$(document).ready(function() {
-		function filterPath(string) {
-			return string
-				.replace(/^\//,'')
-				.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-				.replace(/\/$/,'');
-				}
-					$('a[href*=#]').each(function() {
-					if ( filterPath(location.pathname) == filterPath(this.pathname)
-					&& location.hostname == this.hostname
-					&& this.hash.replace(/#/,'') ) {
-					var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-					var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-					if ($target) {
-					var targetOffset = $target.offset().top;
-					$(this).click(function() {
-						//define o tempo da animação de transição.
-					$('html, body').animate({scrollTop: targetOffset}, 1500);
-						return false;
-					});
-				}
-			}
-		});
-	});
-	// ]]>
-</script>
 </head>
 
 <body>
 	<div class="columns">
 		<div class="column">
 			<div class="columns is-gapless" style="margin:0">
-				<div class="column" style="background-image: url(img/bg.jpg); background-size: cover; background-attachment: fixed" data-stellar-background-ratio="0.2">
+				<div class="column bgTopo" data-stellar-background-ratio="0.2">
 					<div class="columns is-gapless" style="margin: 0">
 						<div class="column">
 							<a id="topo"></a>
@@ -96,25 +38,12 @@
 							    </a>
 							  </div>
 
-<!-- 							  <div class="nav-center">
-							    <a class="nav-item">
-							      <span class="icon">
-							        <i class="fa fa-github"></i>
-							      </span>
-							    </a>
-							    <a class="nav-item">
-							      <span class="icon">
-							        <i class="fa fa-twitter"></i>
-							      </span>
-							    </a>
-							  </div> -->
-
 							  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
 							  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
 							  <span id="hamburger" class="nav-toggle" onclick="abreFechaMenu()">
-							    <span></span>
-							    <span></span>
-							    <span></span>
+							    <span class=""></span>
+							    <span class=""></span>
+							    <span class=""></span>
 							  </span>
 
 							  <!-- This "nav-menu" is hidden on mobile -->
@@ -139,18 +68,18 @@
 							<section class="hero is-large is-bold" style="background: transparent;">
 							  <div class="hero-body" style="padding-bottom: 0; padding-top: 5rem; ">
 							    <div class="container column is-11" style="margin-left: 50px;margin-bottom: 25px">
-							      <h1 class="title" style="font-weight: 20; font-size: 120px; color: #fff">
+							      <h1 class="title tituloTopo">
 							        VOUZ
 							      </h1>
-		  					      <h1 class="title" style="color: #fff; font-size: 45px; font-weight: bold">
+		  					      <h1 class="title subTituloTopo">
 							        Descubra toda a agitação ao seu redor!
 							      </h1>
-							      <h2 class="subtitle" style="color: #fff; font-size: 40px">
+							      <h2 class="subtitle textoTopo">
 									Festas, baladas, bares e muito mais reunidos em um APP. Com o Vouz você nunca ficará sem ter o que fazer!
 							      </h2>
 							    </div>
 								<div class="columns">
-									<div class="column" style="text-align: right;">
+									<div class="column divBtnTopoAndroid">
 										<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
 											<span>
 												<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
@@ -158,7 +87,7 @@
 											Google Play
 										</a>
 									</div>
-									<div class="column" style="text-align: left;">
+									<div class="column divBtnTopoApple">
 										<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
 											<span>
 												<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
@@ -170,13 +99,13 @@
 							  </div>
 							</section>
 						</div>
-						<div class="column" style="background: transparent;display: flex; align-items: flex-end; justify-content: flex-end; position: relative;">
+						<div class="column divImagemAppTopo">
 							<!-- <img src="img\holdingCell.png" style="max-width: 80%; height: auto;"> -->
-							<div style="background-image: url(img/holdingCell.png);background-size: 85% 155%;width: 100%;height: 100%;background-repeat: no-repeat;margin-left: 17%;position: absolute;margin-top: 0%;padding-top: 100px;"></div>
+							<div class="imagemAppTopo"></div>
 						</div>		
 					</div>
-					<div class="columns is-gapless" style="position: absolute;justify-content: center;width: 100%;bottom: -75px;">
-					    <a href="#comoFunciona" style="background-color: grey;opacity: 0.6;justify-content: center;max-width: 50px;border-radius: 30px;">
+					<div class="columns is-gapless divAncoraComoFunciona">
+					    <a href="#comoFunciona" class="ancoraComoFunciona">
 					      <img src="img\scroll-down-arrow-icon.png">
 					    </a>						
 					</div>							
