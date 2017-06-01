@@ -13,13 +13,13 @@
 		padding: 0;
 	}
 	</style>
-		
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/stellar.min.js"></script>
+<script type="text/javascript" src="js/jsIndex.js"></script>		
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/stellar.min.js"></script>
-<script type="text/javascript" src="js/jsIndex.js"></script>
+
 
 </head>
 
@@ -106,7 +106,7 @@
 					</div>
 					<div class="columns is-gapless divAncoraComoFunciona">
 					    <a href="#comoFunciona" class="ancoraComoFunciona">
-					      <img src="img\scroll-down-arrow-icon.png">
+					      <img src="img\scroll-down-arrow-icon.png" class="imgArrowComoFunciona">
 					    </a>						
 					</div>							
 				</div>
@@ -116,7 +116,7 @@
 			<section class="columns is-gapless" style="background: #303030; margin: 0; padding-bottom: 50px" >
 			<a id="comoFunciona" style="padding-top: 100px"></a>
 				<div class="column">
-					<div class="columns" style="margin-top: 50px; margin-bottom: 50px">
+					<div class="columns" style="padding-top: 50px; margin-bottom: 50px">
 						<div class="column" style="text-align: center; font-size: 35px; color: #EE2B7A">
 							COMO FUNCIONA
 						</div>
@@ -165,17 +165,17 @@
 				<a id="Download"></a>
 				<div class="column is-half">
 					<section class="hero is-large is-bold" style="background: #1d1d1d">
-					  <div class="hero-body">
-					    <div class="container column is-11" style="margin-left: 50px; margin-bottom: 25px">
-					      <h1 class="title" style="color: #EE2B7A;font-size: 42px;">
+					  <div class="hero-body body-bloco3Texto">
+					    <div class="container column is-11 textoDownload">
+					      <h1 class="title tituloDownload">
 					        Um novo jeito de curtir seus dias! Nunca mais fique sem ter o que fazer.
 					      </h1>
-					      <h2 class="subtitle" style="color: #EE2B7A;font-size: 24px;padding-top: 15px;">
+					      <h2 class="subtitle subTitutoDownload">
 							No Vouz APP você terá uma timeline repleta de festas e baladas, você poderá ver todas as informações que precisa, comprar seu ingresso ou colocar seu nome na lista VIP, ver quais festas seus amigos irão e ainda salvar aquela foto bacana que tiraram de você na festa. Realize seu Check-in e ganhe pontos para trocar por ingressos.
 					      </h2>
 					    </div>
 						<div class="columns">
-							<div class="column" style="text-align: right;">
+							<div class="column divBtnTopoAndroid ">
 								<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
 									<span>
 										<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
@@ -183,7 +183,7 @@
 									Google Play
 								</a>
 							</div>
-							<div class="column" style="text-align: left;">
+							<div class="column divBtnTopoApple btnAppleDownloadBloco3">
 								<a class="button is-white is-large is-primary is-outlined" style="width: 250px">
 									<span>
 										<img src="img\googlePalyico.png" class="image is-32x32" style="margin-right: 10px">
@@ -195,15 +195,15 @@
 					  </div>
 					</section>
 				</div>
-				<div class="column" style="background: #1d1d1d;display: flex;align-items: flex-end;padding-bottom: 70px;margin-left: 115px;">
-					<img src="img\screens.png" style="max-width: 35%;height: auto;position: absolute;">
+				<div class="column divImagemAppDownload">
+					<img src="img\screens.png" class="imagemAppDownload">
 				</div>
 			</section>
 			
-			<section class="columns is-gapless" style="margin: 0">
+			<section class="columns is-gapless sectionMaisInfo" >
 				<a id="maisInfo"></a>
 				<div class="column">
-					<section class="hero is-medium is-bold" style="background-color: #303030">
+					<section class="hero is-medium is-bold divMaisInfo" style="background-color: #303030">
 					  <div class="hero-body">
 					    <div class="container has-text-centered" >
 					      <h1 class="title" style="color: #fff">
@@ -224,7 +224,7 @@
 					</section>
 				</div>
 			</section>
-			<footer class="footer" style="background: #1d1d1d;padding-top: 96px;">
+			<footer class="footer" style="background: #1d1d1d;">
 			  <div class="container">
 			    <div class="content has-text-centered">
 			      <p>
@@ -233,17 +233,25 @@
 				    </a>
 			      </p>
 			      <p>
-		      		  <div class="nav-center">
-					    <a class="nav-item" href="#comoFunciona" style="color: #EE2B7A">
+	      		  <div class="nav-center footerMenu">
+	      		  	<div>
+					    <a class="nav-item" href="#comoFunciona" style="color: #EE2B7A;">
 					      COMO FUNCIONA
 					    </a>
-					    <a class="nav-item" href="#Download" style="color: #EE2B7A">
+	      		  	</div>
+	      		  	<div>
+					    <a class="nav-item" href="#Download" style="color: #EE2B7A;">
 					      DOWNLOAD
-					    </a>
-					    <a class="nav-item" href="#maisInfo" style="color: #EE2B7A">
+					    </a>	      		  		
+	      		  	</div>
+	      		  	<div>
+					    <a class="nav-item" href="#maisInfo" style="color: #EE2B7A;">
 					      ENTRE EM CONTATO
-					    </a>
-					  </div>
+					    </a>	      		  		
+	      		  	</div>
+	
+							    						    
+				  </div>
 			      </p>
 			      <p>
 			        Copyright 2017 <strong>VOUZ</strong>. Todos os direitos reservados <a href="http://www.navegarti.com.br" target="blank"><strong>NavegarTI</strong></a>.

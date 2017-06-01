@@ -1,9 +1,120 @@
+#bloco3{
+	margin: 0; 
+	background: #1d1d1d;
+}
+.body-bloco3Texto{
+	padding: 0 0 30px 15px !important;
+}
+
+@media (min-width: 320px) {
+	.bgTopo {
+		background-image: url(../img/bg.jpg);  
+		background-size: cover; 
+		background-attachment: fixed;
+	}
+	#hamburger > span{
+		background-color: #EE2B7A;
+	}
+	#hamburger {
+		background-color: transparent;
+	}
+	.hero-body{
+		padding: 0 !important;
+	}
+	.tituloTopo {
+		font-weight: 20; 
+		font-size: 60px; 
+		color: #fff		
+	}
+	.subTituloTopo {
+		color: #fff; 
+		font-size: 20px; 
+		font-weight: bold
+	}
+	.textoTopo {
+		color: #fff; 
+		font-size: 20px
+	}
+	.divImagemAppTopo{
+		/* TO-DO quando for mobile não usar o script para pegar o tamanho do primeiro bloco, definir uma altura para dar pra mostrar a imagem também.*/
+		display: none; 
+	}
+	.divBtnTopoAndroid {
+		text-align: center;
+	}
+	.divBtnTopoApple {
+		text-align: center;
+	}
+	.imgArrowComoFunciona{
+		display: none;
+	}
+	.button.is-primary.is-outlined{
+		border-color: #EE2B7A;
+		color: #fff;
+	}
+	.button.is-primary.is-outlined:hover
+	{
+		background-color: #EE2B7A;
+		border-color: #EE2B7A;
+		color: #fff;
+	}
+	.button.is-primary.is-outlined:focus {
+		background-color: #EE2B7A;
+		border-color: #EE2B7A;
+		color: #fff;
+	}
+	.ancoraComoFunciona {
+		background-color: transparent;
+	}	
+	#bloco3 {
+		height: auto;
+	}	
+	.divAncoraComoFunciona {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		text-align: center;
+	}	
+	.divImagemAppDownload{
+		display: none;
+	}
+	.textoDownload{
+		margin: 0 15px 25px 15px;
+	}
+	.tituloDownload{
+		font-size: 26px;
+		color: #EE2B7A;
+	}
+	.subTitutoDownload{
+		font-size: 18px;
+		color: #EE2B7A;
+		padding-top: 15px;
+	}
+	.btnAppleDownloadBloco3{
+		padding-bottom: 45px;
+	}	
+	.sectionMaisInfo{
+		margin: 0 !important;
+	}
+	.divMaisInfo{
+		padding: 20px;
+	}
+	.footerMenu{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 @media (min-width: 480px) {
 	.bgTopo {
 		background-image: url(../img/bg.jpg);  
 		background-size: cover; 
 		background-attachment: fixed;
 	}
+	#bloco1 {
+		height: 385px;
+	}		
 	#hamburger > span{
 		background-color: #EE2B7A;
 	}
@@ -57,18 +168,19 @@
 		width: 100%;
 		bottom: 0;
 		text-align: center;
-	}		
-}
-
-@media (min-width: 720px) {
-	.bgTopo {
-		background-image: url(../img/bg.jpg);  
-		background-size: cover; 
-		background-attachment: fixed;
+	}	
+	.divImagemAppDownload{
+		display: none;
+	}
+	.tituloDownload{
+		font-size: 26px;
+	}
+	.subTitutoDownload{
+		font-size: 18px;
 	}	
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 	.bgTopo {
 		background-image: url(../img/bg.jpg);  
 		background-size: cover; 
@@ -97,7 +209,7 @@
 		position: relative;
 	}	
 	.imagemAppTopo{
-		background-image: url(img/holdingCell.png);
+		background-image: url(../img/holdingCell.png);
 		background-size: 85% 155%;
 		width: 100%;
 		height: 100%;
@@ -120,12 +232,34 @@
 		max-width: 50px;
 		border-radius: 30px;
 	}	
+	.imgArrowComoFunciona{
+		display: block;
+	}	
 	.divAncoraComoFunciona {
 		position: absolute;
 		justify-content: center;
 		width: 100%;
 		bottom: 0;
 	}	
+	.divImagemAppDownload{
+		background: #1d1d1d;
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 20px !important;
+		margin-left: 115px !important;
+	}	
+	.imagemAppDownload{
+		max-width: 35%;
+		height: auto;
+		position: absolute; 
+	}
+	.tituloDownload{
+		font-size: 40px;
+	}
+	.subTitutoDownload{
+		font-size: 26px;
+	}	
+
 }
 
 

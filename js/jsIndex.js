@@ -1,8 +1,14 @@
 	$(document).ready(function() {
 		$(window).stellar();
 		var windowsHei = $(window).height();
-		$("#bloco1").css('height',windowsHei -80);		
-		$("#bloco3").css('height',windowsHei -80);		
+		if($(window).width() > 780){
+			$("#bloco1").css('height',windowsHei -80);		
+			$("#bloco3").css('height',windowsHei -80);	
+		}
+		if($(window).width() < 468){
+			$("#bloco1").css('height',windowsHei);		
+			$("#bloco3").css('height',windowsHei);	
+		}		
 	});
 
 	function abreFechaMenu(){
