@@ -13,11 +13,10 @@
 		padding: 0;
 	}
 	</style>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/stellar.min.js"></script>
-<script type="text/javascript" src="js/jsIndex.js"></script>		
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <link rel="stylesheet" href="css/style.css">
 
 
@@ -66,7 +65,7 @@
 					<div id="bloco1" class="columns is-gapless" style="margin-bottom: 0px;">
 						<div class="column is-half">
 							<section class="hero is-large is-bold" style="background: transparent;">
-							  <div class="hero-body" style="padding-bottom: 0; padding-top: 5rem; ">
+							  <div class="hero-body animated colunaTextoTopo" style="padding-bottom: 0; padding-top: 5rem; ">
 							    <div class="container column is-11" style="margin-left: 50px;margin-bottom: 25px">
 							      <h1 class="title tituloTopo">
 							        VOUZ
@@ -99,12 +98,15 @@
 							  </div>
 							</section>
 						</div>
-						<div class="column divImagemAppTopo">
+						<div class="column">
 							<!-- <img src="img\holdingCell.png" style="max-width: 80%; height: auto;"> -->
-							<div class="imagemAppTopo"></div>
+							<section class="divImagemAppTopo animated section__imgCelTopo">
+								<div class="imagemAppTopo" style="display: none"></div>
+							</section>
+							
 						</div>		
 					</div>
-					<div class="columns is-gapless divAncoraComoFunciona">
+					<div class="columns is-gapless divAncoraComoFunciona animated bounce infinite">
 					    <a href="#comoFunciona" class="ancoraComoFunciona">
 					      <img src="img\scroll-down-arrow-icon.png" class="imgArrowComoFunciona">
 					    </a>						
@@ -113,51 +115,58 @@
 
 			</div>
 			
-			<section class="columns is-gapless" style="background: #303030; margin: 0; padding-bottom: 50px" >
-			<a id="comoFunciona" style="padding-top: 100px"></a>
+			<section class="columns is-gapless section__comofunciona" style="background: #303030; margin: 0; padding-bottom: 50px" >
+				<a id="comoFunciona" style="padding-top: 100px"></a>
 				<div class="column">
 					<div class="columns" style="padding-top: 50px; margin-bottom: 50px">
-						<div class="column" style="text-align: center; font-size: 35px; color: #EE2B7A">
+						<div class="column animated comoFuncionaTitulo" style="text-align: center; font-size: 35px; color: #EE2B7A; visibility: hidden">
 							COMO FUNCIONA
 						</div>
 					</div>
 					<div class="columns" >
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
-							<div class="columns">
-								<div class="column">
-									<img src="img\icones-01.png" style="width: 280px; height: 280px">
+							<article class="animated cadastre-se" style="visibility: hidden; ">
+								<div  class="columns">
+									<div class="column">
+										<img src="img\icones-01.png" style="width: 280px; height: 280px">
+									</div>
 								</div>
-							</div>
-							<div class="columns">
-								<div class="column" style="color: #EE2B7A; font-size: 22px">
-									CADASTRE-SE
+								<div class="columns">
+									<div class="column" style="color: #EE2B7A; font-size: 22px; text-align: center">
+										CADASTRE-SE
+									</div>
 								</div>
-							</div>
+							</article>						
 						</div>
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
-							<div class="columns">
-								<div class="column">
-									<img src="img\icones-02.png" style="width: 280px; height: 280px">
+							<article class="animated pordentro" style="display:none;" >
+								<div class="columns">
+									<div class="column">
+										<img src="img\icones-02.png" style="width: 280px; height: 280px">
+									</div>
 								</div>
-							</div>
-							<div class="columns">
-								<div class="column" style="color: #EE2B7A; font-size: 22px">
-									FIQUE POR DENTRO
+								<div class="columns">
+									<div class="column" style="color: #EE2B7A; font-size: 22px; text-align: center">
+										FIQUE POR DENTRO
+									</div>
 								</div>
-							</div>
+							</article>							
 						</div>
 						<div class="column is-4" style="display: flex; align-items: center; flex-direction: column;">
-							<div class="columns">
-								<div class="column">
-									<img src="img\icones-03.png" style="width: 280px; height: 280px">
+							<article class="animated partyhard"  style="display:none;">
+								<div class="columns">
+									<div class="column">
+										<img src="img\icones-03.png" style="width: 280px; height: 280px">
+									</div>
 								</div>
-							</div>
-							<div class="columns">
-								<div class="column" style="color: #EE2B7A; font-size: 22px">
-									PARTY HARD
+								<div class="columns">
+									<div class="column" style="color: #EE2B7A; font-size: 22px; text-align: center">
+										PARTY HARD
+									</div>
 								</div>
-							</div>
-						</div>						
+							</article>								
+						</div>
+					
 					</div>
 				</div>
 			</section>
@@ -261,7 +270,12 @@
 			</footer>
 		</div>
 	</div>
-			
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/stellar.min.js"></script>
+<script src="js/jquery.onscreen.min.js"></script>
+<script type="text/javascript" src="js/jsIndex.js"></script>	
+
 </body>
 
 </html>

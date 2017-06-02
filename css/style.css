@@ -200,25 +200,26 @@
 		color: #fff; 
 		font-size: 40px
 	}	
-	.divImagemAppTopo{
-		background: transparent;
-		display: flex; 
-		align-items: 
-		flex-end; 
-		justify-content: flex-end; 
-		position: relative;
-	}	
 	.imagemAppTopo{
 		background-image: url(../img/holdingCell.png);
-		background-size: 85% 155%;
+		background-size: 90% 155%;
 		width: 100%;
 		height: 100%;
 		background-repeat: no-repeat;
 		margin-left: 17%;
-		position: absolute;
-		margin-top: 0%;
-		padding-top: 100px; 
-	}
+		/*position: absolute;*/
+		/*margin-top: 0%;*/
+		/*padding-top: 100px; */
+	}	
+	.divImagemAppTopo{
+		/*background: transparent;*/
+		display: flex; 
+		/*align-items: flex-end; */
+		/*justify-content: flex-end; */
+		/*position: relative;*/
+		height: 100%;
+	}	
+
 	.divBtnTopoAndroid {
 		text-align: right;
 	}
