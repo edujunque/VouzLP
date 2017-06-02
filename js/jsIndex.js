@@ -116,6 +116,9 @@
 		doIn: function() {
 	        $('.body-bloco3Texto').addClass("zoomInDown");
 	        $('.divImagemAppDownload').addClass("zoomInUp");
+	        $('.body-bloco3Texto').css("visibility","visible");
+	        $('.divImagemAppDownload').css("visibility","visible");
+	        
 		},
 		doOut: function() {
 		// Do something to the matched elements as they get off scren

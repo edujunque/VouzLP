@@ -4,6 +4,7 @@
 }
 .body-bloco3Texto{
 	padding: 0 0 30px 15px !important;
+	visibility: hidden;
 }
 
 @media (min-width: 320px) {
@@ -248,6 +249,7 @@
 		align-items: flex-end;
 		padding-bottom: 20px !important;
 		margin-left: 115px !important;
+		visibility: hidden;
 	}	
 	.imagemAppDownload{
 		max-width: 85%;
