@@ -114,8 +114,8 @@
 		container: window,
 		direction: 'vertical',
 		doIn: function() {
-	        $('.body-bloco3Texto').addClass("zoomInDown");
-	        $('.divImagemAppDownload').addClass("zoomInUp");
+	        $('.body-bloco3Texto').addClass("bounceInDown");
+	        $('.divImagemAppDownload').addClass("bounceInUp");
 	        $('.body-bloco3Texto').css("visibility","visible");
 	        $('.divImagemAppDownload').css("visibility","visible");
 	        
