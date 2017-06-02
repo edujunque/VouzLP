@@ -250,9 +250,9 @@
 		margin-left: 115px !important;
 	}	
 	.imagemAppDownload{
-		max-width: 35%;
+		max-width: 85%;
 		height: auto;
-		position: absolute; 
+		/*position: absolute; */
 	}
 	.tituloDownload{
 		font-size: 40px;

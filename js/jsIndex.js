@@ -108,4 +108,18 @@
 		},
 		tolerance: 300,
 		throttle: 50,
-		}); 		
+		});
+		
+		$('#bloco3').onScreen({
+		container: window,
+		direction: 'vertical',
+		doIn: function() {
+	        $('.body-bloco3Texto').addClass("zoomInDown");
+	        $('.divImagemAppDownload').addClass("zoomInUp");
+		},
+		doOut: function() {
+		// Do something to the matched elements as they get off scren
+		},
+		tolerance: 300,
+		throttle: 50,
+		}); 		 		
