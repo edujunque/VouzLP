@@ -83,7 +83,7 @@
 		throttle: 50,
 		});
 
-		$('.comoFuncionaTitulo').onScreen({
+		$('#comoFuncionaTitulo').onScreen({
 		container: window,
 		direction: 'vertical',
 		doIn: function() {
