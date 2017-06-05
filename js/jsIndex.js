@@ -62,38 +62,11 @@
 		});
 	});
 	// ]]>	
-		$('.section__comofunciona').onScreen({
-		container: window,
-		direction: 'vertical',
-		doIn: function() {
-
-	        $('.comoFuncionaTitulo').addClass("bounceIn");
-	        $('.comoFuncionaTitulo').css("visibility","visible");
-	        $('.cadastre-se').addClass("fadeInLeft");
-	        $('.cadastre-se').css("visibility","visible");
-
-	        $('.cadastre-se').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-	            $('.pordentro').show().addClass('fadeInLeft');
-	        });        
-
-	        $('.pordentro').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-	            $('.partyhard').show().addClass('fadeInLeft');
-	        });
-
-			
-
-		},
-		doOut: function() {
-		// Do something to the matched elements as they get off scren
-		},
-		tolerance: 300,
-		throttle: 50,
-		}); 
-
 		$('#bloco1').onScreen({
 		container: window,
 		direction: 'vertical',
 		doIn: function() {
+			// alert('asdad')
 	        $('.colunaTextoTopo').addClass("bounceInDown");
 	        
 	        $('.colunaTextoTopo').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -109,6 +82,31 @@
 		tolerance: 300,
 		throttle: 50,
 		});
+
+		$('.comoFuncionaTitulo').onScreen({
+		container: window,
+		direction: 'vertical',
+		doIn: function() {
+			// alert('teste');
+	        $('.comoFuncionaTitulo').addClass("bounceIn");
+	        $('.comoFuncionaTitulo').css("visibility","visible");
+	        $('.cadastre-se').addClass("fadeInLeft");
+	        $('.cadastre-se').css("visibility","visible");
+
+	        $('.cadastre-se').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+	            $('.pordentro').show().addClass('fadeInLeft');
+	        });        
+
+	        $('.pordentro').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+	            $('.partyhard').show().addClass('fadeInLeft');
+	        });
+		},
+		doOut: function() {
+		// Do something to the matched elements as they get off scren
+		},
+		tolerance: 300,
+		throttle: 50,
+		}); 
 		
 		$('#bloco3').onScreen({
 		container: window,
